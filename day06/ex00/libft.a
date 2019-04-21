@@ -1,0 +1,63 @@
+!<arch>
+ft_putchar.c/   0           0     0     644     104       `
+/* ft_putchar.c */
+
+#include "../includes/tools.h"
+
+void    ft_putchar(char c)
+{
+    write(1, &c, 1);
+}
+ft_swap.c/      0           0     0     644     139       `
+/* ft_swap.c */
+
+#include "../includes/tools.h"
+
+void    ft_swap(int *a, int *b)
+{
+    *a = *a ^ *b;
+    *b = *b ^ *b;
+    *a = *a ^ *b;
+}
+
+ft_putstr.c/    0           0     0     644     129       `
+/* ft_putstr.c */
+
+#include "../includes/tools.h"
+
+void    ft_putstr(char *str)
+{
+    while (*str)
+        write(1, str++, 1);
+}
+
+ft_strlen.c/    0           0     0     644     156       `
+/* ft_strlen.c */
+
+#include <unistd.h>
+
+int     ft_strlen(char *str)
+{
+    int     i;
+
+    i = 0;
+    while (str[i] != '\0')
+        ++i;
+    return (i);
+}
+ft_strcmp.c/    0           0     0     644     242       `
+/* ft_strcmp.c */
+
+int     ft_strcmp(char *s1, char *s2)
+{
+    int     i;
+
+    i = 0;
+    while (s1[i] != '\0' || s2[i] != '\0')
+    {
+        if ((s1[i] - s2[i]) != 0)
+            return (s1[i] - s2[i]);
+        ++i;
+    }
+    return (0);
+}
