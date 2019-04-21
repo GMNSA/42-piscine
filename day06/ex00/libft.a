@@ -1,17 +1,18 @@
 !<arch>
-ft_putchar.c/   0           0     0     644     104       `
+ft_putchar.c/   0           0     0     644     93        `
 /* ft_putchar.c */
 
-#include "../includes/tools.h"
+#include <unistd.h>
 
 void    ft_putchar(char c)
 {
     write(1, &c, 1);
 }
-ft_swap.c/      0           0     0     644     139       `
+
+ft_swap.c/      0           0     0     644     128       `
 /* ft_swap.c */
 
-#include "../includes/tools.h"
+#include <unistd.h>
 
 void    ft_swap(int *a, int *b)
 {
@@ -19,18 +20,16 @@ void    ft_swap(int *a, int *b)
     *b = *b ^ *b;
     *a = *a ^ *b;
 }
-
-ft_putstr.c/    0           0     0     644     129       `
+ft_putstr.c/    0           0     0     644     118       `
 /* ft_putstr.c */
 
-#include "../includes/tools.h"
+#include <unistd.h>
 
 void    ft_putstr(char *str)
 {
     while (*str)
         write(1, str++, 1);
 }
-
 ft_strlen.c/    0           0     0     644     156       `
 /* ft_strlen.c */
 
